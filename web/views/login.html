@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./style/login.css">
+        <link rel="shortcut icon" href="./res/icon.png" type="image/x-icon" />
+        <link rel="icon" href="./res/icon.png" type="image/x-icon" />
+    </head>
+    <body>
+        <header>
+            <span style="position: absolute"><a href="index.html"><img class="logo" src="./res/logo2.png"></a></span>
+        </header>
+        <main>
+            <div style="
+            margin: 0 auto;
+            display: table-cell; 
+            vertical-align: middle;
+            ">
+              <h1 class="center">
+                CALL_US <span class="bold">로그인</span>
+                </h1><br>
+                <p class="text1" style="font-size: 14px; line-height: 3px; letter-spacing: 1.2px;"> 코러스에 오신 걸 환영합니다! </p>
+                <p class="text1" style="font-size: 11px; line-height: 2px; letter-spacing: -0.05px;"> make you connected with your people </p><br><br>                
+                <div class="users" >
+                    <form class="form" >
+                        <ul>
+                            <li class="holder" id="inputIDlabel" >ID</li>
+                            <li><input placeholder="ID" id="inputIDTab" 
+                                onfocus="effect(0);" onfocusout="HD(0);"> </li><br>
+                            <li class="holder" id="inputPWlabel">Password</li>
+                            <li><input placeholder="PASSWORD" id="inputPWTab" 
+                                onfocus="effect(1);" onfocusout="HD(1);"></li><br>
+                            <li>
+                                <input class="st-checkbox" style="float:left; width:12px; opacity: 0;" id="checkbox" type="checkbox" value="value1">
+                                <label id="remember" for="checkbox">내 계정 기억하기</label>
+                            </li><br><br>
+                            <li style="margin: 0;">
+                                <div class="horizon">
+                                    <div style="margin-left: 10px;;margin-right: 55px;">
+                                        <button
+                                        onmouseenter="this.style='background-color: #008cb7; color: white';
+                                        console.log(this);"
+                                        onmouseout=" this.style='background-color: white; color: #008cb7';
+                                        console.log(this);"
+                                        >LOG IN</button>
+                                    </div>
+                                    
+                                    <div style="display: inline-block; text-align: right; white-space: nowrap;">
+                                        <span><a>비밀번호 찾기</a></span><br>
+                                        <span><a>회원가입</a></span>
+                                    </div>
+                            </div>
+                            </li>
+                        </ul>
+                    </form>
+                    <hr>
+                    <div class="pic"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <script src = "./js/inputeffect.js"></script>
+        </footer>
+    </body>
+</html>

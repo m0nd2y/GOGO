@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    style
+        include ./style/login.css
+    link(rel='shortcut icon', href='./res/icon.png', type='image/x-icon')
+    link(rel='icon', href='./res/icon.png', type='image/x-icon')
+  body
+    header
+      span(style='position: absolute')
+        a(href='index.html')
+          img.logo(src='./res/logo3.png')
+
+    main
+      div(style=`\
+      margin: 0 auto;\
+      display: table-cell; \
+      vertical-align: middle;\
+      `)
+        h1.center
+          | GOGO 
+          span.bold 로그인
+        br
+        p.text1(style='font-size: 14px; line-height: 3px; letter-spacing: 1.2px;')  Gogo에 오신 걸 환영합니다! 
+        p.text1(style='font-size: 11px; line-height: 2px; letter-spacing: -0.05px;') If the word you say is good, then the word coming back at you is good
+        br
+        br
+        .users
+          form.form( method="POST" action="/login")
+            ul
+              li#inputIDlabel.holder ID
+              li
+                input#inputIDTab(type="text", placeholder='ID', onfocus='effect(0);', onfocusout='HD(0);' name="ID")
+              br
+              li#inputPWlabel.holder Password
+              li
+                input#inputPWTab(type="password", placeholder='PASSWORD', onfocus='effect(1);', onfocusout='HD(1);' name="PW")
+              br
+              li
+                input#checkbox.st-checkbox(style='float:left; width:12px; opacity: 0;', type='checkbox', value='value1')
+                label#remember(for='checkbox') 내 계정 기억하기
+              br
+              br
+              li(style='margin: 0;')
+                    .horizon
+                        div(style='margin-left: 10px;;margin-right: 85px;')
+                            input( value="LOG IN", type="submit", onmouseenter="this.style='background-color: #e55841; color: white;';", onmouseout=" this.style='background-color: white; color: #e55841;';") 
+                        div(style='display: inline-block; text-align: right; white-space: nowrap;')
+                            span
+                            a 비밀번호 찾기
+                            br
+                            span
+                            a 회원가입
+          hr
+          div.pic
+    footer
+      script
+        include  ./js/inputeffect.js

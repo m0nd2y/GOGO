@@ -1,0 +1,76 @@
+//- script( src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js")
+//- canvas#myChart( width="400", height="400")
+//-             script
+//-                 include ./script/style_chart.js
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    style
+        include ./style/dashboard.css
+    link(rel='shortcut icon', href='./res/icon.png', type='image/x-icon')
+    link(rel='icon', href='./res/icon.png', type='image/x-icon')
+  body
+    header
+        .nav
+            span
+                img.logo( src="./res/logo3.png" onclick="read(); draw();")
+            span.right.right2
+                a(href="logout") LOGOUT
+            .line.right
+            span.right
+                | 반갑습니다, 
+                span.strongText.strongText1 #{id}
+                | 님!
+        script
+            include ./script/style_chart.js
+            include ./script/Chart.min.js
+            
+    main
+      .slide1(onclick="read(); draw();")
+      .slide2
+        span.left
+            img.small_icon( src="./res/date_icon.png")
+            span.strongText.BigText#maintext &nbsp; 
+                //- -/* if ( type == "first")
+                //-     script.
+                //-         console.log(#{type});
+                //-         #{data}
+                //-     | 일별
+                //- - if ( type == "second")
+                //-     script type = "second"
+                //-     | 주별
+                //- - if ( type == "third")
+                //-     script 
+                //-         type = "third"
+                //-     | 월별
+                //-     */
+            | &nbsp;  비속어 사용 현황
+        span.right3( )
+            - if( type == "first" )
+                span#first.selected(onclick="change(1)") 일별
+                ||
+                span#second(onclick="change(2)") 주별
+                ||
+                span#third(onclick="change(3)") 월별
+            - if( type == "second" )
+                span#first(onclick="change(1)") 일별
+                ||
+                span#second.selected(onclick="change(2)")  주별
+                ||
+                span#third(onclick="change(3)") 월별
+            - if( type == "third" )
+                span#first(onclick="change(1)") 일별
+                ||
+                span#second(onclick="change(2)") 주별
+                ||
+                span#third.selected(onclick="change(3)") 월별
+        canvas#myChart(width="200px" height="100px")
+        p#datahidden
+            | #{data}
+        p#typehidden()
+            | #{type}
+        script
+            include ./js/select.js
+    footer
+

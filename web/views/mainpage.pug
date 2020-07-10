@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title GOGO
+        style
+            include ./style/main.css
+    body
+        main
+            .slide1
+                a.pos(href="/login" onmouseout="stop();")
+                    input( value="LOG IN", type="submit", onmouseenter=`\
+                    this.style='background-color: #e55841; color: white;';\
+                    play();\
+                    `, onmouseout=" this.style='background-color: white; color: #e55841;';")
+                    video.er#myVideo(src="./res/toki.mp4", type="video/mp4" preload="auto" )
+        footer
+            script
+                include ./js/load.js

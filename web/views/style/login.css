@@ -1,0 +1,181 @@
+@font-face {
+    font-family: athin;
+    src: url(../font/THIN.ttf);
+}
+@font-face{
+    font-family: asemibold;
+    src: url(../font/SEMIBOLD.ttf);
+}
+
+
+.bold{
+    font-family: asemibold;
+}
+.right{
+    float: right;
+}
+.middle{
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+}
+
+html{
+    font-family: athin;
+    color: black;
+}
+header{
+    width: 100%;
+}
+.logo{
+    width: 138px;
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+
+body{
+    margin: 0;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+main{
+    text-align: center;
+    display: table;
+    width: 100%;
+    height: 100vh;
+}
+.text1{
+    color: #e55841;
+    
+}
+.form{
+    margin-top: 30px;
+    width: 290px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+}
+
+.users{
+    display: flex;
+    flex-direction: row;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.pic{
+    width: 250px;
+    height: 250px;
+    margin: 30px;
+    border-radius: 5px;
+    background-image: url('../res/bg-img.jpg');
+    background-size: cover;
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+}
+
+input{
+    font-family: athin;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 5px;
+    width: 230px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+input:focus{
+    border-bottom: 0.01px solid #e55841;
+}
+ul{
+    list-style: none;
+}
+input:focus{
+    outline: none;
+}
+#IDlabel, #PWlabel{
+    text-align: left;
+}
+button, input[type = 'submit']{
+    width: 70px;
+    height: 30px;
+    border-radius: 13px;
+    border: 0.7px solid #e55841;
+    outline: none;
+    color: #e55841;
+    letter-spacing: -0.3px;    
+    font-size: 12px;
+    background-color: #fff0;
+}
+
+.holder{
+    text-align: left;
+    font-size: 12px;
+    color: #767676;
+}
+#remember{
+    font-size: 12px;
+    width: 130px;
+    text-align: left; 
+    float: left;
+}
+
+#remember:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    text-align: center;
+    color: #e55841;
+    background-color: #929292;
+  }
+.st-checkbox:hover+#remember:before{
+    box-shadow: 0 0 0 1.4px rgba(0, 0, 0, 0.12);
+}
+.st-checkbox:hover, #remember:hover{
+    cursor: pointer;
+}
+.st-checkbox:checked + #remember:before{
+    background-color: #e55841;
+    background-image: url('../res/check-symbol.png');
+    background-size: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.horizon{
+    display: flex;
+    flex-direction: row;
+
+}
+a{
+    font-size: 12px;
+    color: #e55841;
+}
+button:hover{
+    cursor: pointer;
+}
+.pointer{
+    cursor: pointer;
+}
+.disable{
+    opacity: 0.0;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { 
+    color:transparent; 
+}
+ input:focus:-moz-placeholder, textarea:focus:-moz-placeholder { 
+     color:transparent; 
+    }
+ input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { 
+     color:transparent; 
+    } 
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder { 
+    color:transparent; 
+}
